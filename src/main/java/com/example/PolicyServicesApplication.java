@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = "com.example")
 @EnableJpaRepositories(basePackages = "com.example")
 public class PolicyServicesApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(PolicyServicesApplication.class, args);
 	}

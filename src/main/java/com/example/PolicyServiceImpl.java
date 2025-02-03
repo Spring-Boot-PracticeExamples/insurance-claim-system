@@ -4,11 +4,9 @@ import com.insurance.PolicyOuterClass;
 import com.insurance.PolicyServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @GRpcService
 public class PolicyServiceImpl extends PolicyServiceGrpc.PolicyServiceImplBase {
-
     @Autowired
     private PolicyRepository policyRepository;
 
