@@ -34,3 +34,69 @@ Postman Request:
 "description": "Accident on highway",
 "amount": 2500.0
 }
+
+
+SOLID Principle	Related Class / Interface / Package	Explanation
+S – Single Responsibility	- ClaimValidator (validation package)
+- ClaimService
+- NotificationService
+- ClaimProcessor implementations (AutoClaimProcessor, etc.)	Each class has one responsibility, e.g., validation, processing claims, sending notifications
+  O – Open/Closed	- ClaimProcessor interface
+- ClaimProcessorFactory
+- Concrete ClaimProcessor classes	New claim types can be added by creating new processors without modifying existing code
+  L – Liskov Substitution	- ClaimProcessor interface
+- AutoClaimProcessor, HealthClaimProcessor, etc.	Subclasses implement the interface and can be substituted without breaking functionality
+  I – Interface Segregation	- ClaimProcessor interface	The interface is minimal and focused with only the necessary method(s)
+  D – Dependency Inversion	- ClaimService depends on ClaimProcessor abstraction
+- ClaimProcessorFactory provides processors	High-level modules depend on abstractions, not concrete implementations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
